@@ -7,6 +7,7 @@ import Strength from './components/Strength';
 
 function App() {
   const [password, setPassword] = useState('');
+  const [strength, setStrength] = useState(0);
 
   const changePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
@@ -30,7 +31,7 @@ function App() {
         <div className="bg-black-gray p-4">
           <LengthBar length={password.length} />
           <CheckList />
-          <Strength />
+          <Strength strength={strength} />
           <button className="bg-green mt-4 w-full flex items-center justify-center gap-x-4 font-bold p-[18px] text-base md:text-[18px] md:gap-x-6">
             GENERATE <ArrowRight />
           </button>
