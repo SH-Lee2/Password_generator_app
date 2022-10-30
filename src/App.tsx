@@ -40,7 +40,12 @@ function App() {
         </label>
         <div className="bg-black-gray p-4">
           <LengthBar length={password.length} />
-          <CheckList />
+          <CheckList
+            upperCase={upperCase}
+            lowerCase={lowerCase}
+            numbers={numbers}
+            symbols={symbols}
+          />
           <Strength
             upperCase={upperCase}
             lowerCase={lowerCase}
