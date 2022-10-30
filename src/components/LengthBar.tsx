@@ -1,5 +1,3 @@
-import React from 'react';
-
 const LengthBar = ({ length }: { length: number }) => {
   return (
     <>
@@ -7,7 +5,7 @@ const LengthBar = ({ length }: { length: number }) => {
         <h2 className="text-white md:text-lg">Character Length</h2>
         <span className="text-green text-2xl md:text-">{length}</span>
       </div>
-      <div className="relative h-[8px]">
+      <div className="relative">
         <input
           type="range"
           readOnly
@@ -15,12 +13,12 @@ const LengthBar = ({ length }: { length: number }) => {
           max={20}
           value={length}
           step={1}
-          className=" slider h-[8px]"
+          className="slider h-[8px] w-full appearance-none"
         />
         <div
-          className={`bg-green h-[8px] absolute top-0 left-0`}
+          className="bg-white h-[20px] w-[20px] rounded-[50%] absolute top-1 hover:bg-black hover:outline hover:outline-2 hover:outline-green"
           style={{
-            width: `${length * 5}%`,
+            left: `${length * 4.78}%`,
           }}
         />
       </div>
