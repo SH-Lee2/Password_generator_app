@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/passwordgeneratorapp-react-tailwind-css-N5UwemNdPg)
 - Live Site URL: [Add live site URL here](https://password-generator-app-smoky.vercel.app/)
 
 ## My process
@@ -45,6 +45,8 @@ Users should be able to:
 - React
 - Tailwind CSS
 - react-copy-to-clipboard
+- vite
+- vercel
 
 ### Useful resources
 
