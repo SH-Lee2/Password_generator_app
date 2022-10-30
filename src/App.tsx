@@ -7,12 +7,22 @@ import Strength from './components/Strength';
 
 function App() {
   const [password, setPassword] = useState('');
-  const [strength, setStrength] = useState(0);
+  const [upperCase, setUpperCase] = useState(0);
+  const [lowerCase, setLowerCase] = useState(0);
+  const [numbers, setNumbers] = useState(0);
+  const [symbols, setSymbols] = useState(0);
 
   const changePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
+    checkPassword(e.target.value);
   };
 
+  const checkPassword = (str: string) => {
+    /[a-z]/.test(str) ? setLowerCase(1) : setLowerCase(0);
+    /[A-Z]/.test(str) ? setUpperCase(1) : setUpperCase(0);
+    /[0-9]/.test(str) ? setNumbers(1) : setNumbers(0);
+    /[^a-zA-z0-9]/.test(str) ? setSymbols(1) : setSymbols(0);
+  };
   return (
     <main className="flex flex-col justify-center items-center w-full px-4 gap-y-4 h-screen md:gap-y-6">
       <h1 className="text-gray text-sm md:text-2xl">Password Generator</h1>
@@ -31,7 +41,12 @@ function App() {
         <div className="bg-black-gray p-4">
           <LengthBar length={password.length} />
           <CheckList />
-          <Strength strength={strength} />
+          <Strength
+            upperCase={upperCase}
+            lowerCase={lowerCase}
+            numbers={numbers}
+            symbols={symbols}
+          />
           <button className="bg-green mt-4 w-full flex items-center justify-center gap-x-4 font-bold p-[18px] text-base md:text-[18px] md:gap-x-6">
             GENERATE <ArrowRight />
           </button>
