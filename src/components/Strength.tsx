@@ -1,6 +1,7 @@
 import React from 'react';
 
 const STRENGTH = [
+  {},
   {
     text: 'TOO WEAK!',
     color: 'bg-red',
@@ -19,8 +20,7 @@ interface Props {
 
 const Strength = ({ upperCase, lowerCase, numbers, symbols }: Props) => {
   const getStrengthLen = () => {
-    const len = upperCase + lowerCase + numbers + symbols;
-    return len === 0 ? len : len - 1;
+    return upperCase + lowerCase + numbers + symbols;
   };
   const strengthLen = getStrengthLen();
 
@@ -34,11 +34,6 @@ const Strength = ({ upperCase, lowerCase, numbers, symbols }: Props) => {
         <div className="flex gap-x-2">
           <div
             className={`w-[10px] h-[28px]  ${
-              strengthLen >= 0 ? STRENGTH[strengthLen].color : 'border-2 border-white'
-            }`}
-          />
-          <div
-            className={`w-[10px] h-[28px]  ${
               strengthLen >= 1 ? STRENGTH[strengthLen].color : 'border-2 border-white'
             }`}
           />
@@ -50,6 +45,11 @@ const Strength = ({ upperCase, lowerCase, numbers, symbols }: Props) => {
           <div
             className={`w-[10px] h-[28px]  ${
               strengthLen >= 3 ? STRENGTH[strengthLen].color : 'border-2 border-white'
+            }`}
+          />
+          <div
+            className={`w-[10px] h-[28px]  ${
+              strengthLen >= 4 ? STRENGTH[strengthLen].color : 'border-2 border-white'
             }`}
           />
         </div>
