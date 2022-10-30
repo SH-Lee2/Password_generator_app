@@ -52,7 +52,7 @@ function App() {
             numbers={numbers}
             symbols={symbols}
           />
-          <button className="bg-green mt-4 w-full flex items-center justify-center gap-x-4 font-bold p-[18px] text-base md:text-[18px] md:gap-x-6">
+          <button className="bg-green mt-4 w-full flex items-center justify-center gap-x-4 font-bold p-[18px] text-base md:text-[18px] hover:bg-black-gray hover:text-green hover:outline hover:outline-2 hover:outline-green hover:fill-green md:gap-x-6">
             GENERATE <ArrowRight />
           </button>
         </div>
