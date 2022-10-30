@@ -38,7 +38,7 @@ function App() {
     <main className="flex flex-col justify-center items-center w-full px-4 gap-y-4 h-screen md:gap-y-6">
       <h1 className="text-gray text-sm md:text-2xl">Password Generator</h1>
       <form className="flex flex-col gap-y-4 w-full max-w-[343px] md:gap-y-6 md:max-w-[540px]">
-        <label className="flex items-center bg-black-gray p-4 box-border md:px-8 md:py-5">
+        <div className="flex items-center bg-black-gray p-4 box-border md:px-8 md:py-5">
           <input
             type="text"
             value={password}
@@ -57,7 +57,7 @@ function App() {
               <Copy />
             </button>
           </div>
-        </label>
+        </div>
         <div className="bg-black-gray p-4">
           <LengthBar length={password.length} />
           <CheckList
