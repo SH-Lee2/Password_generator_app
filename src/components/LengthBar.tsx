@@ -13,14 +13,14 @@ const LengthBar = ({ length }: { length: number }) => {
           readOnly
           min={0}
           max={20}
-          value={!length ? 10 : length}
+          value={length}
           step={1}
           className=" slider h-[8px]"
         />
         <div
           className={`bg-green h-[8px] absolute top-0 left-0`}
           style={{
-            width: `${length ? length * 5 : 50}%`,
+            width: `${length * 5}%`,
           }}
         />
       </div>
